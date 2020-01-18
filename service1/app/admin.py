@@ -6,7 +6,7 @@ from app.tasks import update_task_ctask
 def handle_task_action(modeladmin, request, queryset):
     for task in queryset:
         update_task_ctask.delay(task.id)
-handle_task_action.short_description = "Обработать"
+handle_task_action.short_description = "Обновить"
 
 
 class TaskAdmin(admin.ModelAdmin):

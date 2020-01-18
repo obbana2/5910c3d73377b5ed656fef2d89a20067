@@ -28,8 +28,8 @@ class Task(models.Model):
         need_update = not self.id
         super(Task, self).save(*args, **kwargs)
         if need_update:
-            from app.utils import update_task
-            update_task(self.id)
+            from app.tasks import update_task_ctask
+            update_task_ctask.delay(self.id)
 
     class Meta:
         verbose_name = 'Задача'
