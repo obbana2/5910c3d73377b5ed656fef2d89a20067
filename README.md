@@ -23,5 +23,12 @@
 
 Для работы проекта требуется установленный Docker и docker-compose.
 
-Проект запускается 1 командой (в папке проекта):  
-`docker-compose up -d`
+`docker-compose up -d` - Запустить проект  
+`docker-compose down` - Остановить  
+`docker-compose down -v` - Остановить и удалить тома  
+
+[http://localhost:8000/admin/](http://localhost:8000/admin/) - Админ-панель  
+При первом запуске создается пользователь.  
+Логин: **admin**  
+Пароль: **11122211**  
+
